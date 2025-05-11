@@ -20,7 +20,7 @@ jobs:
 
       # 3) Empaquetar todo lo que hay en la raíz
       - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .               # <- sube HTML, carpeta _files, .nojekyll…
 
