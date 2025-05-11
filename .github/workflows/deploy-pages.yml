@@ -22,7 +22,7 @@ jobs:
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: TFG/3d.ght.anon.animation.ssw.2011.2012.html               # <- sube HTML, carpeta _files, .nojekyll…
+          path: .              # <- sube HTML, carpeta _files, .nojekyll…
 
       # 4) Desplegar en la rama gh-pages
       - name: Deploy to GitHub Pages
