@@ -2,28 +2,29 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]        # Cada vez que empujes a main
+    branches: [ main ]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Clonar el repo, incluyendo LFS
+      # 1) Clona el repo incluyendo LFS
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          lfs: true             # <- Esto descarga los archivos grandes reales
+          lfs: true
 
-      # 2) Configurar GitHub Pages
+      # 2) Configura GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 3) Empaquetar todo lo que hay en la raíz
+      # 3) Empaqueta todo el contenido de la raíz (HTML + carpeta _files + .nojekyll)
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .              # <- sube HTML, carpeta _files, .nojekyll…
+          path: .
 
-      # 4) Desplegar en la rama gh-pages
+      # 4) Despliega en GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
