@@ -1,0 +1,2 @@
+3d.ght.anon.animation.ssw.2011.2012.html filter=lfs diff=lfs merge=lfs -text
+3d.ght.anon.animation.ssw.2011.2012_files/* filter=lfs diff=lfs merge=lfs -text
