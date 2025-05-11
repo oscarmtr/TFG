@@ -1,66 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TFG - Visualizaciones 3D</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f4f8;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2em;
-      margin: 0;
-    }
-    h1 {
-      color: #1a73e8;
-      margin-bottom: 0.5em;
-    }
-    p {
-      max-width: 600px;
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      width: 100%;
-      max-width: 300px;
-    }
-    a {
-      display: block;
-      padding: 0.8em;
-      text-align: center;
-      background: #1a73e8;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
-    a:hover {
-      background: #155ab6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óscar Mata Romero - TFG</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Evita las barras de desplazamiento */
+            font-family: 'Times New Roman', Times;
+            color: #333;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* Elimina el borde del iframe */
+            z-index: -1;
+            /* Envía el iframe al fondo */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            /* Asegura que el contenido esté encima del iframe */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5em;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 0.8em;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            /* Añade sombra al texto */
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 1.5em;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            color: #ffffff;
+            max-width: 800px;
+            margin-bottom: 2.5em;
+            font-size: 1em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        a {
+            display: block;
+            padding: 0.8em;
+            text-align: center;
+            background: #547fbd;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #155bb6fb;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Visualizaciones 3D - TFG</h1>
-  <p>Selecciona una animación para visualizar la estructura y evolución del vórtice polar estratosférico.</p>
- <div class="iframe-container">
+    <!-- Iframe para mostrar la página web como fondo -->
     <iframe
-      src="3d.ght.anon.animation.ssw.2011.2012.html"
-      loading="lazy"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <div class="buttons">
-    <a href="3d.ght.anon.animation.ssw.2011.2012.html">Anomalías Geopotenciales (2011–2012)</a>
-    <a href="3d.vortex.structure.jan2009.html">Estructura del Vórtice (Enero 2009)</a>
-    <a href="3d.wind.max.levels.structure.html">Vientos Máximos por Nivel</a>
-    <!-- Puedes añadir más enlaces así -->
-  </div>
+        src="https://earth.nullschool.net/#2019/01/03/1300Z/wind/isobaric/10hPa/orthographic=0.00,90.00,400"></iframe>
+    <!-- Cambia la URL por la página deseada -->
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h1>Estudio del impacto del vórtice polar estratosférico en el clima del hemisferio norte</h1>
+        <h2>Autor: Óscar Mata Romero<br>Tutora: Cristina Peña Ortiz</h2>
+        <p>Visualizaciones 3D de figuras de las anomalías de altura geopotencial para los niveles desde 1 hPa a 1000
+            hPa.</p>
+        <div class="buttons">
+            <a href="3d.vortex.structure.jan2009.html">SSWs 2000-2023</a>
+            <a href="3d.ght.anon.animation.ssw.2011.2012.html">SSW minor 2011-2012</a>
+            <a href="3d.wind.max.levels.structure.html">SSW 2008-2009</a>
+        </div>
+    </div>
 </body>
+
 </html>
